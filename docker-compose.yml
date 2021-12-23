@@ -1,0 +1,17 @@
+version: "3.7"
+
+services:
+  db:
+    image: postgres
+    container_name: microservice-db-unification
+    restart: always
+    tty: true
+    ports:
+      - 5434:5432
+    environment:
+      - POSTGRES_USER=admin
+      - POSTGRES_PASSWORD=123456
+      - POSTGRES_DB=unification
+    volumes:
+      - ./.docker/dbdata:/var/lib/postgresql/data
+      - ./.docker/postgres:/docker-entrypoint-initdb.d/init.sql

@@ -1,0 +1,12 @@
+{
+    "type": "postgres",
+    "port": 5434,
+    "host": "localhost",
+    "username": "admin",
+    "password": "123456",
+    "database": "unification",
+    "migrations": ["./src/migrations/*.ts"],
+    "cli": {
+        "migrationsDir": "./src/migrations"
+    }
+}
